@@ -24,7 +24,7 @@ Follow the steps below to use and build the project:
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/huffman-coding.git
+   git clone https://github.com/ragab2010/huffman-coding.git
    ```
 
 2. Build the project using CMake:
