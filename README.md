@@ -2,7 +2,7 @@
 # Huffman Coding Project
 <!--![data_compression Demo](compression_decompression.gif)
 -->
-<kbd><img src="compression_decompression.gif" width="900"></kbd>
+<kbd><img src="compression_decompression.gif" width="800"></kbd>
 ## Description
 This is a C++ project that demonstrates data compression and decompression using the Huffman coding algorithm. Huffman coding is a widely used method for lossless data compression, often utilized in file compression tools, data transmission, and various applications where efficient data storage is essential.
 
