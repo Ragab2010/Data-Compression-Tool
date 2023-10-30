@@ -38,12 +38,12 @@ Follow the steps below to use and build the project:
 3. Run the executable:
    - For compression:
      ```sh
-     ./MyHuffmanProject
+     ./bin/MyHuffmanProject
      ```
 
    - For decompression:
      ```sh
-     ./MyHuffmanProject
+     ./bin/MyHuffmanProject
      ```
 
 ## Usage
