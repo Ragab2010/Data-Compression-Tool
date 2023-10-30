@@ -17,10 +17,10 @@ int main() {
 
         // Read the content of the input file
         std::string input = readFile(inputPath);
-        std::cout<<"the string is :"<<input<<std::endl;
+        //std::cout<<"the string is :"<<input<<std::endl;
         // Frequency analysis
         std::map<char, int> frequencyMap = calculateFrequency(input);
-        cout<<"/***the frequencyMap ****/"<<endl;
+        //cout<<"/***the frequencyMap ****/"<<endl;
 
         // for(auto&[symbol , count]: frequencyMap){
         //     cout<<symbol<<" : "<<count<<endl;
@@ -38,13 +38,13 @@ int main() {
 
         // Save Huffman tree header
         std::string huffmanTreeHeader = addHuffmanTreeHeader(huffmanTree);
-        std::cout<<"the huffmanTreeHeader:"<<huffmanTreeHeader<<std::endl;
+        //std::cout<<"the huffmanTreeHeader:"<<huffmanTreeHeader<<std::endl;
         // Combine Huffman tree header and compressed data
         //std::string compressedWithHeader = huffmanTreeHeader + compressedData;
         // In the compression part
         std::string compressedWithHeader = huffmanTreeHeader + '\n' + compressedData;
 
-        std::cout<<"the compressedWithHeader:"<<compressedWithHeader<<std::endl;
+        //std::cout<<"the compressedWithHeader:"<<compressedWithHeader<<std::endl;
         // Write the compressed data (including the header) to the output file
         writeFile(outputPath, compressedWithHeader);
 
@@ -59,7 +59,7 @@ int main() {
     
         // Read the content of the input file (including the Huffman tree header and compressed data)
         std::string compressedWithHeader = readFile(inputPath);
-        std::cout<<"the compressedWithHeader:"<<compressedWithHeader<<std::endl;
+        //std::cout<<"the compressedWithHeader:"<<compressedWithHeader<<std::endl;
 
         // Extract Huffman tree header and compressed data
         // In the decompression part
@@ -67,16 +67,16 @@ int main() {
         std::string huffmanTreeHeader = compressedWithHeader.substr(0, headerEnd);
         std::string compressedData = compressedWithHeader.substr(headerEnd + 1);
 
-        std::cout << "Extracted Huffman Tree Header: " << huffmanTreeHeader << std::endl;
+        //std::cout << "Extracted Huffman Tree Header: " << huffmanTreeHeader << std::endl;
 
 
-        std::cout<<"before : buildHuffmanTreeFromHeader"<<std::endl;
+        //std::cout<<"before : buildHuffmanTreeFromHeader"<<std::endl;
         // Build Huffman tree from header
         Node *huffmanTree = buildHuffmanTreeFromHeader(huffmanTreeHeader);
 
         // Decompress the data using the Huffman tree
         std::string decompressedData = decompressData(compressedData, huffmanTree);
-        std::cout<<"the decompressedData:"<<decompressedData<<std::endl;
+        //std::cout<<"the decompressedData:"<<decompressedData<<std::endl;
     
         // Write the decompressed data to the output file
         writeFile(outputPath, decompressedData);
@@ -86,6 +86,8 @@ int main() {
         // Clean up memory for the Huffman tree nodes
         // Implement necessary cleanup here
         delete huffmanTree; // Clean up the root of the Huffman tree
+    }else if(choice == '3'){
+        return 0;
     } else {
         std::cout << "Invalid choice.\n";
     }

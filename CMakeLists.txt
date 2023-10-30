@@ -16,5 +16,5 @@ file(GLOB SOURCES "src/*.cpp")
 add_executable(MyHuffmanProject ${SOURCES})
 
 # Set the output directory for the executable
-set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/../bin)
 
